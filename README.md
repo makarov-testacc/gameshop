@@ -45,7 +45,7 @@ define('DB_SETTINGS',[
 
 # Примеры
 
-Приводятся для хоста `gameshop.loc` .
+Приводятся для хоста `gameshop.loc` . Для того, чтобы они работали, в `/etc/hosts` машины, на которой запускаем `curl` и `ab` - должен быть прописан адрес соответствующего хоста, вроде: `127.0.0.1 gameshop.loc`.
 
 - Создание заказа: `curl -k -X POST -H "Content-Type:application/x-www-form-urlencoded" -d 'sku=STEAM-TOPUP-500' https://gameshop.loc/create_order`
 - Успешная оплата единичного заказа (order_id значение orders.id из базы): `curl -k -X POST -H "Content-Type:application/x-www-form-urlencoded" -d 'order_id=1&status=paid' https://gameshop.loc/payment`
