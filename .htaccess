@@ -1,0 +1,10 @@
+DirectoryIndex disp.php
+
+RewriteEngine on
+RewriteCond %{REQUEST_FILENAME} !-f
+ RewriteCond %{REQUEST_FILENAME} !-d
+ RewriteCond %{REQUEST_URI} !=/img/favicon.ico
+ RewriteRule ^(.*)$ disp.php?q=$1 [L,QSA]
+<Files ~ "\.(log|pm|pl|sql|gz|json)$">
+Deny from all
+</Files>
